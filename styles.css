@@ -19,7 +19,7 @@ main {
   display: inline-block;
 }
 
-nav {
+.nav-small-screen {
   margin-top: 0;
   padding: 0 30px;
   width: 100%;
@@ -31,6 +31,14 @@ nav {
   align-items: center;
   background-color: white;
   overflow: hidden;
+}
+
+.nav-med-screen {
+  display: none;
+}
+
+.nav-large-screen {
+  display: none;
 }
 
 .nav-icon-wrapper {
@@ -70,11 +78,44 @@ nav {
 
 .jumbotron-text-workshop {
   margin: 0;
-  padding: 2px 0 0 0;
+  padding: 0;
   display: block;
   font-size: 72px;
   font-weight: 300;
   line-height: 72px;
+}
+
+.jumbotron-subtext-wrapper {
+  display: flex;
+  justify-content: center;
+  /*align-items: baseline;*/
+  margin-left: 2em;
+  margin-right: 2em;
+  height: 40px;
+  overflow: hidden;
+}
+
+.jumbotron-subtext {
+  height: auto;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron-subtext-white-lines-wrapper {
+  height: auto;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron-subtext-white-lines {
+  height: 10px;
+  width: 100%;
+  border: 1px solid white;
+  background-color: white;
 }
 
 .jumbotron-text-subheading {
@@ -408,4 +449,176 @@ nav {
   letter-spacing: 1.1px;
   color: #bdd436;
   text-decoration: none;
+}
+
+.chat-online-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #bdd436;
+  position: fixed;
+  right: 10%;
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-online-button img {
+  height: 25px;
+  width: auto;
+}
+
+@media ( min-width: 481px ) {
+  .jumbotron-wrapper {
+    height: 400px;
+  }
+
+  .jumbotron-text-wrapper {
+    height: 266px;
+    padding-top: 70px;
+  }
+
+  .jumbotron-text-workshop {
+    font-size: 95px;
+    line-height: 95px;
+  }
+
+  .jumbotron-subtext {
+    width: 250px;
+  }
+
+  .jumbotron-text-subheading {
+    margin: 0;
+    padding: 0;
+  }
+
+  .button-wrapper {
+    height: 133px;
+  }
+
+
+
+  .jumbotron-subtext-white-lines {
+    width: 4.5em;
+  }
+}
+
+@media ( min-width: 769px ) {
+  main {
+    margin-top: 0;
+  }
+  /* hide mobile nav bar */
+  .nav-small-screen {
+    display: none;
+  }
+
+  .jumbotron-wrapper {
+    height: 519px;
+    padding: 0 2em;
+    display: block;
+    overflow: hidden;
+  }
+  /* display ipad-web two tier nav bar with logo on top and links bottom center*/
+  .nav-med-screen {
+    width: 769px;
+    display: block;
+    margin: 2em auto 0 auto;
+    position: relative;
+  }
+
+  .nav-med-screen-logo-wrapper {
+    height: 35px;
+    width: 50px;
+    display: inline-block;
+    float: left;
+  }
+
+  .nav-med-screen-logo-wrapper img {
+    height: 35px;
+    width: auto;
+  }
+
+  .nav-med-screen-bottom-row-wrapper {
+    display: inline-block;
+    float: right;
+    clear: both;
+    text-align: right;
+    font-family: 'Lato', sans-serif;
+    margin-top: 0.5em;
+  }
+
+  .nav-med-screen-bottom-row-wrapper a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-right: 1.3em;
+    letter-spacing: 0.05em;
+  }
+
+  .jumbotron-text-wrapper {
+    width: 769px;
+    height: 17.5rem;
+    margin: 5em auto 0 auto;
+    display: block;
+  }
+  /*shrink "learn more" button*/
+  /*have jumbotron text container span the width of the page*/
+  /*left justify "your digital"*/
+  .jumbotron-text-your-digital {
+    text-align: left;
+  }
+
+  .jumbotron-text-workshop {
+    font-size: 10rem;
+    line-height: 9rem;
+  }
+
+  .jumbotron-subtext-wrapper {
+    margin: 1.5em auto 0 auto;
+  }
+
+  .jumbotron-subtext-white-lines-wrapper {
+    width: 15%;
+  }
+
+  .jumbotron-subtext-white-lines {
+    width: 100%;
+  }
+
+  .jumbotron-subtext {
+    width: 70%;
+  }
+
+  .button-wrapper {
+    margin-top: 1.5em;
+  }
+
+  .jumbotron .button {
+    width: 25%;
+  }
+
+  .chat-online-button {
+    right: 6%;
+  }
+}
+
+@media ( min-width: 992px ) {
+  /*make here's how it works sub-blocks go inline-block*/
+  /* display large nav bar with icon and text on one end and links on the other end */
+
+  .nav-med-screen {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .jumbotron-text-wrapper {
+    margin-top: 0;
+  }
+
+  .jumbotron .button {
+    width: 18%;
+  }
 }
